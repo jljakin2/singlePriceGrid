@@ -22,8 +22,38 @@ html {
 
 body {
   font-family: "Karla", sans-serif;
+  background: var(--grayish-blue);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* ===== LAYOUT ===== */
+.main-container {
+  width: 39.6875rem;
+  height: 29.6875rem;
+  background: #fff;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+
+.header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.sub {
+  background: var(--cyan);
+}
+
+.why {
+  background: var(--cyan);
+  opacity: 85%;
+}
 /* ===== COMPONENTS ===== */
 
 /* ===== ATTRIBUTION ===== */
