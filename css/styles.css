@@ -4,6 +4,9 @@
   --bright-yellow: hsl(71, 73%, 54%);
   --light-gray: hsl(204, 43%, 93%);
   --grayish-blue: hsl(218, 22%, 67%);
+
+  --regular: 400;
+  --bold: 700;
 }
 
 /* ===== BASE ===== */
@@ -35,26 +38,125 @@ body {
   width: 39.6875rem;
   height: 29.6875rem;
   background: #fff;
+  box-shadow: 0 1rem 2rem 0 rgba(0, 81, 171, 0.15);
+  border-radius: 0.5rem;
 
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 45% 55%;
 }
 
+/* ===== COMPONENTS ===== */
+/* TEXT */
+.lower__title {
+  font-size: 1.125rem;
+  color: #fff;
+  font-weight: var(--bold);
+
+  margin-bottom: 1rem;
+}
+
+/* HEADER */
 .header {
+  padding: 2.5rem;
+
   grid-column: 1 / -1;
   grid-row: 1 / 2;
 }
 
-.sub {
-  background: var(--cyan);
+.header__title {
+  color: var(--cyan);
+  font-size: 1.5rem;
+  font-weight: var(--bold);
+
+  margin-bottom: 1.5rem;
 }
 
+.header__sub-title {
+  font-size: 1.125rem;
+  color: var(--bright-yellow);
+  font-weight: var(--bold);
+
+  margin-bottom: 0.625rem;
+}
+
+.header__text {
+  font-size: 1rem;
+  font-weight: var(--regular);
+  color: var(--grayish-blue);
+  line-height: 1.6;
+}
+
+/* SUB */
+.sub {
+  background: var(--cyan);
+  color: #fff;
+
+  padding: 2.5rem;
+}
+
+.sub__price {
+  font-size: 2rem;
+  font-weight: var(--bold);
+
+  margin-bottom: 0.25rem;
+}
+
+.sub__price span {
+  font-size: 1rem;
+  opacity: 50%;
+  font-weight: var(--regular);
+
+  margin-left: 0.75rem;
+}
+
+.sub__sub-title {
+  font-size: 1rem;
+  font-weight: var(--regular);
+
+  margin-bottom: 1.625rem;
+}
+
+.btn__sign-up {
+  border: none;
+  background: var(--bright-yellow);
+  color: #fff;
+  box-shadow: 0 0.625rem 0.625rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: var(--bold);
+
+  width: 100%;
+  padding: 1rem 0;
+
+  transition: all 0.2s;
+}
+
+.btn__sign-up:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.btn__sign-up:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+/* WHY */
 .why {
   background: var(--cyan);
   opacity: 85%;
+
+  padding: 2.5rem;
 }
-/* ===== COMPONENTS ===== */
+
+.why__list {
+  list-style: none;
+  color: #fff;
+  opacity: 75%;
+  font-weight: var(--regular);
+}
 
 /* ===== ATTRIBUTION ===== */
 .attribution {
@@ -66,3 +168,6 @@ body {
 }
 
 /* ===== MEDIA QUERIES ===== */
+background: #ffffff;
+
+border-radius: 8px;
